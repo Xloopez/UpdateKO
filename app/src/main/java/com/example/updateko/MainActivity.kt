@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var recyclerViewTrainName: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,21 +15,22 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        trainTypesListFragment()
+        trainNameRecyclerView()
 
     }
 
-    fun trainTypesListFragment(){
-        //hittar vår fragment
-        val trainTypesListFragment = TrainTypesListFragment()
-        val transaction = supportFragmentManager.beginTransaction()
+    fun trainNameRecyclerView(){
+        //Hittar vår recycler view i vår layout
+        recyclerViewTrainName = findViewById(R.id.trainNamesRecyclerView)
 
-        if (trainTypesListFragment != null) {
-            transaction.add(R.id.container, trainTypesListFragment!!, "trainTypesListFragment")
-            transaction.commit()
-        }
+        recyclerViewTrainName.layoutManager = LinearLayoutManager(this)
 
+        //Kopplar recyclerView till adapter
+        val adapter = TrainTypeRecycleAdapter(this, 100, supportFragmentManager)
+        recyclerViewTrainName.adapter = adapter
     }
+
+
 
 
 
