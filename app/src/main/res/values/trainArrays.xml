@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="TrainTypeInfoArray">
+        <item>TrainNames</item>
+        <item>TrainCathegory</item>
+        <item>TrainQuestions</item>
+    </string-array>
+
+    <string-array name="TrainNames">
+        <item>Tåg namn 1</item>
+        <item>Tåg namn 2</item>
+        <item>Tåg namn 3</item>
+    </string-array>
+
+    <string-array name="TrainCathegory">
+
+    </string-array>
+
+    <string-array name="TrainQuestions">
+
+    </string-array>
+
+
+
+
+
+
+</resources>

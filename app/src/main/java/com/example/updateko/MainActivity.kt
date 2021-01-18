@@ -9,11 +9,13 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var recyclerViewTrainName: RecyclerView
 
+    lateinit var trainNameArray: Array<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        trainNameArray = resources.getStringArray(R.array.TrainNames)
 
         trainNameRecyclerView()
 
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         recyclerViewTrainName.layoutManager = LinearLayoutManager(this)
 
         //Kopplar recyclerView till adapter
-        val adapter = TrainTypeRecycleAdapter(this, 100, supportFragmentManager)
+        val adapter = TrainTypeRecycleAdapter(this, trainNameArray.size, supportFragmentManager)
         recyclerViewTrainName.adapter = adapter
     }
 
