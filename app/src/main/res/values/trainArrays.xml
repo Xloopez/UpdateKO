@@ -8,9 +8,11 @@
     </string-array>
 
     <string-array name="TrainNames">
-        <item>Tåg namn 1</item>
-        <item>Tåg namn 2</item>
+        <item>X40</item>
+        <item>X2</item>
         <item>Tåg namn 3</item>
+        <item>Tåg namn 4</item>
+        <item>Tåg namn 5</item>
     </string-array>
 
     <string-array name="TrainCathegory">

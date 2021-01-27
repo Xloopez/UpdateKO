@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         recyclerViewTrainName.layoutManager = LinearLayoutManager(this)
 
         //Kopplar recyclerView till adapter
-        val adapter = TrainTypeRecycleAdapter(this, trainNameArray.size, supportFragmentManager)
+        val adapter = TrainTypeRecycleAdapter(this, trainNameArray, supportFragmentManager)
         recyclerViewTrainName.adapter = adapter
     }
 
