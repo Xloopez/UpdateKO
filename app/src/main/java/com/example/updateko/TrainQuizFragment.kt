@@ -40,9 +40,9 @@ class TrainQuizFragment : Fragment() {
 
         val textView = view.findViewById<TextView>(R.id.positionOfTrain)
 
-        textView.text = listOfTrainNames[trainIndex!!]
-
-        //textView?.text = strtext?.toInt().toString()
+        trainIndex.let {
+            textView.text = listOfTrainNames[trainIndex!!]
+        }
 
     }
 }
